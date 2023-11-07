@@ -1,0 +1,1 @@
+INITRAMFS_FSTYPES = "cpio.gz"
