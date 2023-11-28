@@ -1,0 +1,72 @@
+From 5beb87c1f3857e5075f8c4b4ad00aae9762d675c Mon Sep 17 00:00:00 2001
+From: Atanas Bunchev <atanas.bunchev@konsulko.com>
+Date: Wed, 15 Nov 2023 15:19:23 +0200
+Subject: [PATCH 1/2] Integrate with Balena u-boot environment
+
+Boot from the Balena rootfs partition.
+
+Signed-off-by: Atanas Bunchev <atanas.bunchev@konsulko.com>
+---
+ board/phytec/phycore_am62x/phycore_am62x.env | 12 ++++++------
+ include/config_distro_bootcmd.h              |  2 +-
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/board/phytec/phycore_am62x/phycore_am62x.env b/board/phytec/phycore_am62x/phycore_am62x.env
+index 81f6e783ac..505d82ab78 100644
+--- a/board/phytec/phycore_am62x/phycore_am62x.env
++++ b/board/phytec/phycore_am62x/phycore_am62x.env
+@@ -13,23 +13,23 @@ bootpart=1
+ rd_spec=-
+ mmcrootfstype=ext4 rootwait
+ args_mmc=setenv bootargs console=${console} ${optargs}
+-	root=/dev/mmcblk${mmcdev}p${mmcroot} rw
++	${resin_kernel_root} rw
+ 	rootfstype=${mmcrootfstype}
+ 
+ init_mmc=run args_all args_mmc
+-get_fdt_mmc=load mmc ${mmcdev}:${bootpart} ${fdtaddr} ${fdtfile}
++get_fdt_mmc=load ${resin_dev_type} ${resin_dev_index}:${resin_boot_part} ${fdtaddr} ${fdtfile}
+ get_overlay_mmc=
+ 	fdt address ${fdtaddr};
+ 	fdt resize 0x100000;
+ 	for overlay in $overlays;
+ 	do;
+-	  load mmc ${mmcdev}:${bootpart} ${dtboaddr} ${overlay} &&
++	  load ${resin_dev_type} ${resin_dev_index}:${resin_boot_part} ${dtboaddr} ${overlay} &&
+ 	  fdt apply ${dtboaddr};
+ 	done;
+ #ifdef CONFIG_CMD_EXTENSION
+ get_extension_mmc=
+ 	setenv extension_overlay_addr ${dtboaddr};
+-	setenv extension_overlay_cmd 'load mmc ${mmcdev}:${bootpart}
++	setenv extension_overlay_cmd 'load ${resin_dev_type} ${resin_dev_index}:${resin_root_part}
+ 	  ${dtboaddr} ${extension_overlay_name}';
+ 	extension scan;
+ 	extension apply all;
+@@ -37,8 +37,8 @@ get_extension_mmc=
+ get_extension_mmc=echo "no extension command"
+ #endif
+ 
+-get_kern_mmc=load mmc ${mmcdev}:${bootpart} ${loadaddr} ${name_kern}
+-get_fit_mmc=load mmc ${mmcdev}:${bootpart} ${addr_fit} ${name_fit}
++get_kern_mmc=load ${resin_dev_type} ${resin_dev_index}:${resin_root_part} ${loadaddr} /boot/${name_kern}
++get_fit_mmc=load ${resin_dev_type} ${resin_dev_index}:${resin_boot_part} ${addr_fit} ${name_fit}
+ 
+ serverip=192.168.3.10
+ ipaddr=192.168.3.11
+diff --git a/include/config_distro_bootcmd.h b/include/config_distro_bootcmd.h
+index 9d2a225e7e..1ef82447ac 100644
+--- a/include/config_distro_bootcmd.h
++++ b/include/config_distro_bootcmd.h
+@@ -515,7 +515,7 @@
+ 		"\0"                                                      \
+ 	\
+ 	"scan_dev_for_boot_part="                                         \
+-		"part list ${devtype} ${devnum} -bootable devplist; "     \
++		"setenv devplist ${resin_root_part}; "                    \
+ 		"env exists devplist || setenv devplist 1; "              \
+ 		"for distro_bootpart in ${devplist}; do "                 \
+ 			"if fstype ${devtype} "                           \
+-- 
+2.39.2
+
