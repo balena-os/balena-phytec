@@ -20,10 +20,10 @@ module.exports =
 
 	yocto:
 		machine: 'phyboard-lyra-am62xx-2'
-		image: 'balena-image'
+		image: 'balena-image-flasher'
 		fstype: 'balenaos-img'
 		version: 'yocto-kirkstone'
-		deployArtifact: 'balena-image-phyboard-lyra-am62xx-2.balenaos-img'
+		deployArtifact: 'balena-image-flasher-phyboard-lyra-am62xx-2.balenaos-img'
 		compressed: true
 
 	configuration:
