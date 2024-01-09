@@ -1,0 +1,40 @@
+#!/bin/sh
+
+set -e
+
+# Flash required boot files to mmcblk0boot0
+
+if ! id | grep -q root; then
+	echo "must be run as root"
+	exit
+fi
+
+
+# Enable /dev/mmcblk0boot0
+mmc bootpart enable 1 1 /dev/mmcblk0
+mmc bootbus set single_backward x1 x8 /dev/mmcblk0
+
+# Permanently enable the eMMC H/W Reset feature
+#mmc hwreset enable /dev/mmcblk0 | true
+
+
+# Enable writing to /dev/mmcblk0boot0
+echo 0 > /sys/class/block/mmcblk0boot0/force_ro
+
+
+echo "Clearing mmcblk0boot0"
+dd if=/dev/zero of=/dev/mmcblk0boot0 count=32 bs=128k
+
+echo "Copying tiboot3.bin..."
+dd if=/mnt/boot/tiboot3.bin of=/dev/mmcblk0boot0 count=1024 conv=fsync
+echo "Copying tispl.bin..."
+dd if=/mnt/boot/tispl.bin of=/dev/mmcblk0boot0 seek=1024 count=3072 conv=fsync
+echo "Copying u-boot.img..."
+dd if=/mnt/boot/u-boot.img of=/dev/mmcblk0boot0 seek=5120 count=3072 conv=fsync
+
+sync
+
+
+# Disable writing to /dev/mmcblk0boot0
+echo 1 > /sys/class/block/mmcblk0boot0/force_ro
+
