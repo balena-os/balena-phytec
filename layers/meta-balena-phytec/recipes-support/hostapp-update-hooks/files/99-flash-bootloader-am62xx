@@ -1,0 +1,65 @@
+#!/bin/sh
+
+set -e
+
+# Flash required boot files on mmcblk0boot0
+
+if ! id | grep -q root; then
+	echo "must be run as root"
+	exit
+fi
+
+# Only apply this hook when running from the internal eMMC
+current_rootfs=$(findmnt --noheadings --canonicalize --output SOURCE /mnt/sysroot/active)
+if ! echo $current_rootfs | grep mmcblk0 > /dev/null; then
+	echo Not running from eMMC. Skipping bootloader update hook.
+	exit
+fi
+
+
+tiboot_file="tiboot3.bin"
+tiboot_block_size=512
+tiboot_seek_blocks=0
+
+tispl_file="tispl.bin"
+tispl_block_size=512
+tispl_seek_blocks=1024
+
+uboot_file="u-boot.img"
+uboot_block_size=512
+uboot_seek_blocks=5120
+
+
+# Enable writing to /dev/mmcblk0boot0
+echo 0 > /sys/class/block/mmcblk0boot0/force_ro
+
+
+# List of file aliases to flash sorted by ascending target address
+update_files="tiboot tispl uboot"
+
+for i in $update_files; do
+	current_update_file=$(eval echo \$${i}_file)
+	block_size=$(eval echo \$${i}_block_size)
+	seek_blocks=$(eval echo \$${i}_seek_blocks)
+
+	# Calculate size and md5sum of the binary to update from the update bundle
+	update_size=$(stat -c%s /resin-boot/$current_update_file)
+	update_md5sum=$(md5sum /resin-boot/$current_update_file | awk '{print $1'})
+
+	# Calculate number of bytes to skip when computing the md5sum of the old flashed binary
+	skip_bytes=$((block_size * seek_blocks))
+
+	# Calculate the md5sum of the data already written to the eMMC, using $update_size bytes and skipping $skip_bytes
+	existing_md5sum=$(dd if=/dev/mmcblk0boot0 skip=$skip_bytes bs=1 count=$update_size status=none | md5sum | awk '{print $1}')
+
+	if [ ! "$existing_md5sum" = "$update_md5sum" ]; then
+		echo "Flashing $current_update_file to /dev/mmcblk0boot0"
+		dd if=/resin-boot/$current_update_file of=/dev/mmcblk0boot0 conv=fsync seek=$seek_blocks bs=$block_size
+	fi
+done
+
+
+sync
+
+# Disable writing to /dev/mmcblk0boot0
+echo 1 > /sys/class/block/mmcblk0boot0/force_ro
