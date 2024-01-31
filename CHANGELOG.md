@@ -1,6 +1,212 @@
 # v2.105.10
 ## (2022-10-13)
 
+# v5.1.18
+## (2024-01-31)
+
+
+<details>
+<summary> Update layers/meta-balena to 926c556a680f3d42118f2f8cb5c5cd67b1f79c3c [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.1.18
+> ### (2024-01-29)
+> 
+> * classes: kernel-balena: expose watchdog in sysfs [Alex Gonzalez]
+> 
+> ## meta-balena-5.1.17
+> ### (2024-01-29)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 01e65ec [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.42
+>> #### (2024-01-29)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.16
+> ### (2024-01-27)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 7c94243 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.41
+>> #### (2024-01-26)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.28 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.15
+> ### (2024-01-26)
+> 
+> * networkmanager: make FORWARD rules for shared interfaces last in chain [Michal Toman]
+> 
+> ## meta-balena-5.1.14
+> ### (2024-01-24)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to e618772 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.40
+>> #### (2024-01-23)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.39
+>> #### (2024-01-23)
+>> 
+>> * Update actions/upload-artifact digest to 26f96df [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.13
+> ### (2024-01-23)
+> 
+> * Start extract-balena-ca before os-config update [jaomaloy]
+> 
+> ## meta-balena-5.1.12
+> ### (2024-01-19)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 6be4049 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.38
+>> #### (2024-01-18)
+>> 
+>> * Update actions/upload-artifact digest to 694cdab [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.37
+>> #### (2024-01-15)
+>> 
+>> * Update actions/upload-artifact digest to 1eb3cb2 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.36
+>> #### (2024-01-15)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.11
+> ### (2024-01-18)
+> 
+> * kernel-balena: Only sign initramfs for EFI machines [Alex Gonzalez]
+> * balena-image: Add TPM tools conditionally on tpm machine feature [Alex Gonzalez]
+> * initrdscripts: Add TPM/EFI tools conditionally on tpm machine feature [Alex Gonzalez]
+> * os-helpers: rename os-helpers-secureboot to os-helpers-efi [Alex Gonzalez]
+> * image-balena: extract hup boot partition checks into a function [Alex Gonzalez]
+> * balena-keys: Distinguish EFI devices [Alex Gonzalez]
+> * balena-image-flasher: only add grub configuration for EFI devices [Alex Gonzalez]
+> * balena-image: only add grub configuration for EFI machines [Alex Gonzalez]
+> 
+> ## meta-balena-5.1.10
+> ### (2024-01-12)
+> 
+> * tests/bluetooth: Leave Autokit host discoverable on BT for a longer period of time [Alexandru Costache]
+> 
+> ## meta-balena-5.1.9
+> ### (2024-01-11)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 0210c02 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.35
+>> #### (2024-01-11)
+>> 
+>> * change to ssh tunnel [rcooke-warwick]
+>> 
+>> ### leviathan-2.29.34
+>> #### (2024-01-10)
+>> 
+>> * Update core/contracts digest to 14a10d9 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.8
+> ### (2024-01-09)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to dbcacdb [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.33
+>> #### (2024-01-09)
+>> 
+>> * timeout netcat process [rcooke-warwick]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.7
+> ### (2024-01-09)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v15.2.0 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-15.2.0
+>> #### (2024-01-08)
+>> 
+>> * Try MDNS lookup only if regular DNS lookup fails [Felipe Lalanne]
+>> * Refactor mdns lookup code in app entry [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-15.1.1
+>> #### (2024-01-02)
+>> 
+>> * docs: api: start-service: specify this endpoint affects the device [Alex Gonzalez]
+>> 
+>> ### balena-supervisor-15.1.0
+>> #### (2023-11-22)
+>> 
+>> * Force remove container if updateMetadata fails [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.1.6
+> ### (2024-01-08)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 5163c31 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.32
+>> #### (2024-01-08)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.31
+>> #### (2024-01-05)
+>> 
+>> * Update core/contracts digest to b469f31 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v5.1.5+rev1
 ## (2024-01-31)
 
