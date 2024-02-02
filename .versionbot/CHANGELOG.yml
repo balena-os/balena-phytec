@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 24b1d6737c8a0159da6d28f5a6afe50ed5080ab8
+      hash: 59853e14c60fac1316e37507d2a77e5e71f2edd3
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 24b1d6737c8a0159da6d28f5a6afe50ed5080ab8
+        changelog-entry: Update balena-yocto-scripts to 24b1d6737c8a0159da6d28f5a6afe50ed5080ab8
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Remove unused block-build functions
+              hash: 130d7fb70f4a10755731e898e87610547fe44692
+              body: ""
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.20.0
+          title: ""
+          date: 2024-02-02T16:29:21.897Z
+  version: 5.1.21+rev1
+  title: ""
+  date: 2024-02-02T17:39:25.949Z
+- commits:
     - subject: Update layers/meta-balena to 282df4bf06581eb6224ecd0eadfc53c0ec078907
       hash: b35b2555a97d6c61e99357a639253a1d1d21c38c
       body: Update layers/meta-balena
