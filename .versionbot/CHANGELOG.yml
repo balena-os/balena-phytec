@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update layers/poky to 445a6223929b9a7a62b575093659e3d9e1aba982
+      hash: 08c389c4b946cdcf15bc30ce67ca9304d28e3768
+      body: Update layers/poky
+      footer:
+        Changelog-entry: Update layers/poky to 445a6223929b9a7a62b575093659e3d9e1aba982
+        changelog-entry: Update layers/poky to 445a6223929b9a7a62b575093659e3d9e1aba982
+      author: balena-renovate[bot]
+      nested: []
+  version: 7.9.3+rev1
+  title: ""
+  date: 2026-08-11T16:25:35.085Z
+- commits:
     - subject: fix kernel-headers-test build
       hash: 391d95a38856892e3874d9f00013ffea539a2f1f
       body: |
