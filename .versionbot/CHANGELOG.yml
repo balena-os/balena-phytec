@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update layers/meta-cyclonedx to 221bf15bf2081d1d025f069429f1b94a14d520af
+      hash: e43398b5b885259e8d1bf5ab9ad25400a7c8de4c
+      body: Update layers/meta-cyclonedx
+      footer:
+        Changelog-entry: Update layers/meta-cyclonedx to
+          221bf15bf2081d1d025f069429f1b94a14d520af
+        changelog-entry: Update layers/meta-cyclonedx to
+          221bf15bf2081d1d025f069429f1b94a14d520af
+      author: balena-renovate[bot]
+      nested: []
+  version: 7.9.3+rev4
+  title: ""
+  date: 2026-08-11T23:24:09.069Z
+- commits:
     - subject: Update layers/meta-arm to c3e9fb12aa31d25e33d8392c4a233ed1275a3278
       hash: 613c5bf2398cfb1cd0b63fdc8e4f00cf1e2f1c51
       body: Update layers/meta-arm
