@@ -1,6 +1,11 @@
 # v2.105.10
 ## (2022-10-13)
 
+# v7.9.3+rev3
+## (2026-08-11)
+
+* Update layers/meta-arm to c3e9fb12aa31d25e33d8392c4a233ed1275a3278 [balena-renovate[bot]]
+
 # v7.9.3+rev2
 ## (2026-08-11)
 

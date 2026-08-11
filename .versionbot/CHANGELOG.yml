@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update layers/meta-arm to c3e9fb12aa31d25e33d8392c4a233ed1275a3278
+      hash: 613c5bf2398cfb1cd0b63fdc8e4f00cf1e2f1c51
+      body: Update layers/meta-arm
+      footer:
+        Changelog-entry: Update layers/meta-arm to c3e9fb12aa31d25e33d8392c4a233ed1275a3278
+        changelog-entry: Update layers/meta-arm to c3e9fb12aa31d25e33d8392c4a233ed1275a3278
+      author: balena-renovate[bot]
+      nested: []
+  version: 7.9.3+rev3
+  title: ""
+  date: 2026-08-11T19:32:30.905Z
+- commits:
     - subject: Update contracts to 410a252de768cef05e71bde5417361819dda50e1
       hash: 4eaca63169e8b6eba5b0258a132c54d4037bcaad
       body: Update contracts
