@@ -1,6 +1,21 @@
 # v2.105.10
 ## (2022-10-13)
 
+# v7.9.6+rev3
+## (2026-08-19)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 41b2a508561040cf5d36cdc8c4d5a225cfc73b4d [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.42.6
+> ### (2026-08-19)
+> 
+> * Update actions/github-script action to v9 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v7.9.6+rev2
 ## (2026-08-19)
 
