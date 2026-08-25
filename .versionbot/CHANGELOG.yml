@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update contracts to 7314bbfc3bf44b0499093f04bdab21d22e46cc5e
+      hash: 25bb0be9d7a6472dc88db1a4d3731a318ed1b9da
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 7314bbfc3bf44b0499093f04bdab21d22e46cc5e
+        changelog-entry: Update contracts to 7314bbfc3bf44b0499093f04bdab21d22e46cc5e
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hw.device-type: Update Orin boards L4T version to 39.2.0"
+              hash: ebae4da834d1e4efe16b41718189ae26005af527
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.148
+          title: ""
+          date: 2026-08-24T18:52:54.835Z
+  version: 8.0.1+rev2
+  title: ""
+  date: 2026-08-25T05:11:04.018Z
+- commits:
     - subject: Update balena-yocto-scripts to 6ea43b88e510d849952538fb77a60544fbfc3b77
       hash: 454c7847aabd0c25bb356489cbae89f3b4c88cc7
       body: Update balena-yocto-scripts
