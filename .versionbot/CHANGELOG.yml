@@ -1,4 +1,59 @@
 - commits:
+    - subject: Update layers/meta-balena to 7dbf3fe8ce198bc7b88be72bb30791223716c39c
+      hash: f98aadf5907dab19467d1e5e7a19f08ad7b6ae7a
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 7dbf3fe8ce198bc7b88be72bb30791223716c39c
+        changelog-entry: Update layers/meta-balena to 7dbf3fe8ce198bc7b88be72bb30791223716c39c
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-bootloader.bbclass: Move common bits from devices to class"
+              hash: f0b0c9843b896451123a6e41e7d8e5421608b20b
+              body: >
+                After adding the balena bootloader to a handful of devices, some
+                stuff
+
+                keeps getting copy/pasted into the bootloader recipes.
+
+
+                This patch moves the common bits to balena-bootloader.bbclass to
+                avoid
+
+                duplication and make it easier to use.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-8.0.3
+          title: ""
+          date: 2026-08-24T19:29:40.404Z
+        - commits:
+            - subject: "distro:balena-os.inc: Remove gobject-introspection-data from
+                DISTRO_FEATURES"
+              hash: 049d1a5bf38786fa1d2d50ac563234d4aa742645
+              body: >
+                We do not use GObject Introspection typelib files in the hostOS
+                so let's
+
+                remove them in order to help shrink the rootfs.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-8.0.2
+          title: ""
+          date: 2026-08-21T20:43:55.785Z
+  version: 8.0.3
+  title: ""
+  date: 2026-08-25T08:09:16.881Z
+- commits:
     - subject: Update contracts to 7314bbfc3bf44b0499093f04bdab21d22e46cc5e
       hash: 25bb0be9d7a6472dc88db1a4d3731a318ed1b9da
       body: Update contracts
