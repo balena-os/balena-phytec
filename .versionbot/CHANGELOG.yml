@@ -1,4 +1,34 @@
 - commits:
+    - subject: Update balena-yocto-scripts to cfcaee3d08296635a74f3841839401afa0298e01
+      hash: 0cbd91a47c988492f3ab58f724509e5cfaef5908
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to cfcaee3d08296635a74f3841839401afa0298e01
+        changelog-entry: Update balena-yocto-scripts to cfcaee3d08296635a74f3841839401afa0298e01
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Fix ESR tagging step
+              hash: f2c61d1131f1e65491cc00970f669b742121295e
+              body: >
+                THere was a flaw in the ESR tagging logic that would tag the
+                most recently published ESR release as next etc. even if it was
+                an older base version - this could happen in the case of
+                backports
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: balena-yocto-scripts-1.42.14
+          title: ""
+          date: 2026-09-14T19:03:42.788Z
+  version: 8.0.10+rev1
+  title: ""
+  date: 2026-09-15T00:09:58.533Z
+- commits:
     - subject: Update layers/meta-balena to 84a61cce6adbcb6bfe05cf08a96f6fe415359104
       hash: a1b3a896b97a7fa40fc986b8711fe08a0a9ca29f
       body: Update layers/meta-balena
