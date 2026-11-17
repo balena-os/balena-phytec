@@ -1,6 +1,11 @@
 # v2.105.10
 ## (2022-10-13)
 
+# v9.1.0+rev2
+## (2026-11-17)
+
+* balena-image: Fix typo in state partition size [Alexandru]
+
 # v9.1.0+rev1
 ## (2026-11-14)
 

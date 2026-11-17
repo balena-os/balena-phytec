@@ -1,4 +1,20 @@
 - commits:
+    - subject: "balena-image: Fix typo in state partition size"
+      hash: 2f51ed039301b3a760817f2bd162d907425aa168
+      body: >
+        The state partition size was being set by meta-balena due to a typo in
+        the device integration repository.
+      footer:
+        Changelog-entry: "balena-image: Fix typo in state partition size"
+        changelog-entry: "balena-image: Fix typo in state partition size"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru
+      nested: []
+  version: 9.1.0+rev2
+  title: ""
+  date: 2026-11-17T16:27:47.530Z
+- commits:
     - subject: Update balena-yocto-scripts to 6396c352087dfb8e51878aac70a59b5806eafebf
       hash: 1c20869ee1ce957bb4470ba5fbb2fbde165a0aaa
       body: Update balena-yocto-scripts
