@@ -1,6 +1,21 @@
 # v2.105.10
 ## (2022-10-13)
 
+# v9.1.0+rev4
+## (2026-11-19)
+
+
+<details>
+<summary> Update balena-yocto-scripts to d2ffdf35ad27c2e97c53ea54b301543cc97b3763 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.42.19
+> ### (2026-11-18)
+> 
+> * hostapp-deploy: Stop depending on s3-deploy [Kyle Harding]
+> 
+
+</details>
+
 # v9.1.0+rev3
 ## (2026-11-17)
 
